@@ -44,7 +44,7 @@ public class swingtest extends JFrame{
 	JPanel center_left = new JPanel();	// 메인 내부에 들어갈 기본패널위에있는 좌측패널
 	JPanel center_right = new JPanel();	// 메인 내부에 들어갈 기본패널위에있는 우측패널
 	JLabel left_menu = new JLabel("Menu", SwingConstants.CENTER);
-	JPanel center_my = new Record_panel();
+	JPanel center_record = new Record_panel();
 	JPanel center_payment = new center_payment();
 	
 	JButton left_menu_item1 = null;
@@ -93,7 +93,7 @@ public class swingtest extends JFrame{
 		center.add(center_main,BorderLayout.CENTER);
 		
 		center_main.add(center_center, "main");
-		center_main.add(center_my, "my");
+		center_main.add(center_record, "record");
 		center_main.add(center_payment, "payment");
 		
 		center_center.add(center_left, BorderLayout.CENTER);
@@ -140,7 +140,7 @@ public class swingtest extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cards.show(center_main,"my");
+				cards.show(center_main,"record");
 				
 			}
 		});
