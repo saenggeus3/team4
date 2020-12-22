@@ -110,15 +110,15 @@ public class swingtest extends JFrame{
 		left_menu_item1.setBounds(0, 100, 200, 50);
 		left_menu_item1.setBackground(new Color(64,43,100));
 		left_menu_item1.addMouseListener(new Left_menu_item(left_menu_item1));
-		left.add(left_menu_item1);
+		//left.add(left_menu_item1);
 		
 		left_menu_item2 = new Left_menu_btn("item2");
 		left_menu_item2.setBounds(0, 150, 200, 50);
 		left_menu_item2.addMouseListener(new Left_menu_item(left_menu_item2));
-		left.add(left_menu_item2);
+		//left.add(left_menu_item2);
 		
 		left_menu_item3 = new Left_menu_btn("결제");
-		left_menu_item3.setBounds(0, 200, 200, 50);
+		left_menu_item3.setBounds(0, 100, 200, 50);
 		left_menu_item3.setBackground(new Color(64,43,100));
 		left_menu_item3.addMouseListener(new Left_menu_item(left_menu_item3));
 		left_menu_item3.addActionListener(new ActionListener() {
@@ -133,7 +133,7 @@ public class swingtest extends JFrame{
 		
 		
 		left_menu_item4 = new Left_menu_btn("판매기록 & 환불");
-		left_menu_item4.setBounds(0, 250, 200, 50);
+		left_menu_item4.setBounds(0, 150, 200, 50);
 		left_menu_item4.addMouseListener(new Left_menu_item(left_menu_item4));
 		
 		left_menu_item4.addActionListener(new ActionListener() {
@@ -157,7 +157,7 @@ public class swingtest extends JFrame{
 				
 			}
 		});
-		left.add(left_menu_item5);
+		//left.add(left_menu_item5);
 		
 		setVisible(true);
 		
