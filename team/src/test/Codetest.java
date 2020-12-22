@@ -1,9 +1,10 @@
+package test;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import team.Payment;
 
-public class test {
+public class Codetest {
 
 	
 	public static void main(String[] args) {
