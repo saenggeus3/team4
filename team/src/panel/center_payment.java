@@ -229,18 +229,22 @@ public class center_payment extends JPanel{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
+				if (shoes_list != null) {
+					String resultStr = null;
+					resultStr = JOptionPane.showInputDialog("회원카드번호입력");
+					
+					if (pay.MemberPay(shoes_list, resultStr) != -1) {
+						JOptionPane.showMessageDialog(null, "결제완료");
+						ta.setText("");
+						total_view.setText("");
+					}else {
+						JOptionPane.showMessageDialog(null, "결제에 실패했습니다.");
+					}
+				}
 
 				
-				String resultStr = null;
-				resultStr = JOptionPane.showInputDialog("회원카드번호입력");
 				
-				if (pay.MemberPay(shoes_list, resultStr) != -1) {
-					JOptionPane.showMessageDialog(null, "결제완료");
-					ta.setText("");
-					total_view.setText("");
-				}else {
-					JOptionPane.showMessageDialog(null, "결제에 실패했습니다.");
-				}
 				
 				
 			}
@@ -252,14 +256,16 @@ public class center_payment extends JPanel{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 
-				
-				if (pay.pay(shoes_list) != -1) {
-					JOptionPane.showMessageDialog(null, "결제완료");
-					ta.setText("");
-					total_view.setText("");
-				}else {
-					JOptionPane.showMessageDialog(null, "결제에 실패했습니다.");
+				if (shoes_list != null) {
+					if (pay.pay(shoes_list) != -1) {
+						JOptionPane.showMessageDialog(null, "결제완료");
+						ta.setText("");
+						total_view.setText("");
+					}else {
+						JOptionPane.showMessageDialog(null, "결제에 실패했습니다.");
+					}
 				}
+				
 				
 				
 			}
